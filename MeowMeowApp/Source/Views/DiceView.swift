@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootView: UIView {
+class DiceView: UIView {
     
     let container: UIView = {
         let container = UIView()
@@ -60,7 +60,7 @@ class RootView: UIView {
         self.container.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(40)
             make.bottom.equalToSuperview()
         }
         

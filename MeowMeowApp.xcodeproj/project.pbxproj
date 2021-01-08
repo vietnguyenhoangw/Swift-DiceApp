@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,15 +14,23 @@
 		DCBE2D7525A5724B00FD7C8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCBE2D7425A5724B00FD7C8F /* Assets.xcassets */; };
 		DCBE2D7825A5724B00FD7C8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCBE2D7725A5724B00FD7C8F /* Preview Assets.xcassets */; };
 		DCBE2D7B25A5724B00FD7C8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBE2D7925A5724B00FD7C8F /* LaunchScreen.storyboard */; };
-		DCBE2D8825A572E700FD7C8F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D8725A572E700FD7C8F /* RootView.swift */; };
-		DCBE2D8C25A572FF00FD7C8F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D8B25A572FF00FD7C8F /* RootViewController.swift */; };
+		DCBE2D8825A572E700FD7C8F /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D8725A572E700FD7C8F /* DiceView.swift */; };
+		DCBE2D8C25A572FF00FD7C8F /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D8B25A572FF00FD7C8F /* DiceViewController.swift */; };
+		DCDCDE3425A6F832002EE9FB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3325A6F832002EE9FB /* RootView.swift */; };
+		DCDCDE3825A6F869002EE9FB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3725A6F869002EE9FB /* RootViewController.swift */; };
+		DCDCDE3B25A7019C002EE9FB /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */; };
+		DCDCDE3F25A70514002EE9FB /* logo-game.gif in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDE3E25A70514002EE9FB /* logo-game.gif */; };
+		DCDCDE4225A807FC002EE9FB /* QuizzlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4125A807FB002EE9FB /* QuizzlerView.swift */; };
+		DCDCDE4525A80812002EE9FB /* QuizzlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4425A80812002EE9FB /* QuizzlerViewController.swift */; };
+		DCDCDE4925A84052002EE9FB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4825A84052002EE9FB /* Question.swift */; };
+		DCDCDE4C25A8406A002EE9FB /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4B25A8406A002EE9FB /* QuestionList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2229A6624A02D7974491AA5F /* Pods_DiceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC8544C06E2527C896F1F11 /* Pods-DiceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceApp.release.xcconfig"; path = "Target Support Files/Pods-DiceApp/Pods-DiceApp.release.xcconfig"; sourceTree = "<group>"; };
 		AF9810D43C1F242C215B72F4 /* Pods-DiceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceApp.debug.xcconfig"; path = "Target Support Files/Pods-DiceApp/Pods-DiceApp.debug.xcconfig"; sourceTree = "<group>"; };
-		DCBE2D6B25A5724700FD7C8F /* DiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCBE2D6B25A5724700FD7C8F /* MeowMeowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeowMeowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DCBE2D7225A5724700FD7C8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,8 +38,16 @@
 		DCBE2D7725A5724B00FD7C8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCBE2D7A25A5724B00FD7C8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCBE2D7C25A5724B00FD7C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCBE2D8725A572E700FD7C8F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		DCBE2D8B25A572FF00FD7C8F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DCBE2D8725A572E700FD7C8F /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		DCBE2D8B25A572FF00FD7C8F /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
+		DCDCDE3325A6F832002EE9FB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DCDCDE3725A6F869002EE9FB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		DCDCDE3E25A70514002EE9FB /* logo-game.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "logo-game.gif"; path = "../../../Downloads/logo-game.gif"; sourceTree = "<group>"; };
+		DCDCDE4125A807FB002EE9FB /* QuizzlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerView.swift; sourceTree = "<group>"; };
+		DCDCDE4425A80812002EE9FB /* QuizzlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerViewController.swift; sourceTree = "<group>"; };
+		DCDCDE4825A84052002EE9FB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		DCDCDE4B25A8406A002EE9FB /* QuestionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +76,13 @@
 				AF9810D43C1F242C215B72F4 /* Pods-DiceApp.debug.xcconfig */,
 				2FC8544C06E2527C896F1F11 /* Pods-DiceApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		DCBE2D6225A5724700FD7C8F = {
 			isa = PBXGroup;
 			children = (
-				DCBE2D6D25A5724700FD7C8F /* DiceApp */,
+				DCBE2D6D25A5724700FD7C8F /* MeowMeowApp */,
 				DCBE2D6C25A5724700FD7C8F /* Products */,
 				1E63C38EDE73A8A23B97FB0F /* Pods */,
 				05FFC09F8EF136E68712B619 /* Frameworks */,
@@ -77,24 +92,26 @@
 		DCBE2D6C25A5724700FD7C8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCBE2D6B25A5724700FD7C8F /* DiceApp.app */,
+				DCBE2D6B25A5724700FD7C8F /* MeowMeowApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCBE2D6D25A5724700FD7C8F /* DiceApp */ = {
+		DCBE2D6D25A5724700FD7C8F /* MeowMeowApp */ = {
 			isa = PBXGroup;
 			children = (
 				DCBE2D8625A572C100FD7C8F /* Source */,
 				DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */,
 				DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */,
+				DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */,
 				DCBE2D7225A5724700FD7C8F /* ContentView.swift */,
+				DCDCDE3E25A70514002EE9FB /* logo-game.gif */,
 				DCBE2D7425A5724B00FD7C8F /* Assets.xcassets */,
 				DCBE2D7925A5724B00FD7C8F /* LaunchScreen.storyboard */,
 				DCBE2D7C25A5724B00FD7C8F /* Info.plist */,
 				DCBE2D7625A5724B00FD7C8F /* Preview Content */,
 			);
-			path = DiceApp;
+			path = MeowMeowApp;
 			sourceTree = "<group>";
 		};
 		DCBE2D7625A5724B00FD7C8F /* Preview Content */ = {
@@ -108,7 +125,9 @@
 		DCBE2D8325A5728C00FD7C8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DCBE2D8725A572E700FD7C8F /* RootView.swift */,
+				DCBE2D8725A572E700FD7C8F /* DiceView.swift */,
+				DCDCDE3325A6F832002EE9FB /* RootView.swift */,
+				DCDCDE4125A807FB002EE9FB /* QuizzlerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,7 +135,9 @@
 		DCBE2D8425A5729B00FD7C8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DCBE2D8B25A572FF00FD7C8F /* RootViewController.swift */,
+				DCBE2D8B25A572FF00FD7C8F /* DiceViewController.swift */,
+				DCDCDE3725A6F869002EE9FB /* RootViewController.swift */,
+				DCDCDE4425A80812002EE9FB /* QuizzlerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +145,7 @@
 		DCBE2D8525A572A800FD7C8F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCDE4725A8403D002EE9FB /* Questions */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -138,12 +160,21 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		DCDCDE4725A8403D002EE9FB /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				DCDCDE4825A84052002EE9FB /* Question.swift */,
+				DCDCDE4B25A8406A002EE9FB /* QuestionList.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DCBE2D6A25A5724700FD7C8F /* DiceApp */ = {
+		DCBE2D6A25A5724700FD7C8F /* MeowMeowApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCBE2D7F25A5724B00FD7C8F /* Build configuration list for PBXNativeTarget "DiceApp" */;
+			buildConfigurationList = DCBE2D7F25A5724B00FD7C8F /* Build configuration list for PBXNativeTarget "MeowMeowApp" */;
 			buildPhases = (
 				12C639FDE7C373EAD69E6A37 /* [CP] Check Pods Manifest.lock */,
 				DCBE2D6725A5724700FD7C8F /* Sources */,
@@ -155,9 +186,9 @@
 			);
 			dependencies = (
 			);
-			name = DiceApp;
+			name = MeowMeowApp;
 			productName = DiceApp;
-			productReference = DCBE2D6B25A5724700FD7C8F /* DiceApp.app */;
+			productReference = DCBE2D6B25A5724700FD7C8F /* MeowMeowApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +205,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DCBE2D6625A5724700FD7C8F /* Build configuration list for PBXProject "DiceApp" */;
+			buildConfigurationList = DCBE2D6625A5724700FD7C8F /* Build configuration list for PBXProject "MeowMeowApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -187,7 +218,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DCBE2D6A25A5724700FD7C8F /* DiceApp */,
+				DCBE2D6A25A5724700FD7C8F /* MeowMeowApp */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCBE2D7B25A5724B00FD7C8F /* LaunchScreen.storyboard in Resources */,
+				DCDCDE3F25A70514002EE9FB /* logo-game.gif in Resources */,
 				DCBE2D7825A5724B00FD7C8F /* Preview Assets.xcassets in Resources */,
 				DCBE2D7525A5724B00FD7C8F /* Assets.xcassets in Resources */,
 			);
@@ -252,11 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCBE2D8C25A572FF00FD7C8F /* RootViewController.swift in Sources */,
+				DCBE2D8C25A572FF00FD7C8F /* DiceViewController.swift in Sources */,
+				DCDCDE3B25A7019C002EE9FB /* iOSDevCenters+GIF.swift in Sources */,
 				DCBE2D6F25A5724700FD7C8F /* AppDelegate.swift in Sources */,
+				DCDCDE3425A6F832002EE9FB /* RootView.swift in Sources */,
+				DCDCDE4225A807FC002EE9FB /* QuizzlerView.swift in Sources */,
+				DCDCDE3825A6F869002EE9FB /* RootViewController.swift in Sources */,
 				DCBE2D7125A5724700FD7C8F /* SceneDelegate.swift in Sources */,
 				DCBE2D7325A5724700FD7C8F /* ContentView.swift in Sources */,
-				DCBE2D8825A572E700FD7C8F /* RootView.swift in Sources */,
+				DCDCDE4525A80812002EE9FB /* QuizzlerViewController.swift in Sources */,
+				DCDCDE4C25A8406A002EE9FB /* QuestionList.swift in Sources */,
+				DCDCDE4925A84052002EE9FB /* Question.swift in Sources */,
+				DCBE2D8825A572E700FD7C8F /* DiceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,15 +436,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DiceApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MeowMeowApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DiceApp/Info.plist;
+				INFOPLIST_FILE = MeowMeowApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vietnguyen.DiceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vietnguyen.MeowMeowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,15 +458,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DiceApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MeowMeowApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DiceApp/Info.plist;
+				INFOPLIST_FILE = MeowMeowApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vietnguyen.DiceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vietnguyen.MeowMeowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DCBE2D6625A5724700FD7C8F /* Build configuration list for PBXProject "DiceApp" */ = {
+		DCBE2D6625A5724700FD7C8F /* Build configuration list for PBXProject "MeowMeowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCBE2D7D25A5724B00FD7C8F /* Debug */,
@@ -446,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCBE2D7F25A5724B00FD7C8F /* Build configuration list for PBXNativeTarget "DiceApp" */ = {
+		DCBE2D7F25A5724B00FD7C8F /* Build configuration list for PBXNativeTarget "MeowMeowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DCBE2D8025A5724B00FD7C8F /* Debug */,

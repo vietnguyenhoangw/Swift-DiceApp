@@ -8,18 +8,31 @@
 import UIKit
 import SnapKit
 
-class RootViewController: UIViewController {
+class DiceViewController: UIViewController {
     
     let diceeArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6",]
     
-    let _view: RootView = {
-        let view = RootView()
+    let _view: DiceView = {
+        let view = DiceView()
         return view
     }()
     
     override func viewDidLoad() {
         self.setupLayout()
         self._view.btnRoll.addTarget(self, action: #selector(self.onRollPress), for: .touchUpInside)
+        
+        title = "DICE GAME"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(onBackPrevious))
+    }
+    
+    @objc func onBackPrevious() {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: nil)
+        dismiss(animated: false)
     }
     
     @objc func onRollPress() {
