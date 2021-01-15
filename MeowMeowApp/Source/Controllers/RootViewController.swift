@@ -22,12 +22,7 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         self.setupLayout()
-        
-        self._view.btnDiceGame.tag = 0
-        self._view.btnDiceGame.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
-        
-        self._view.btnQnA.tag = 1
-        self._view.btnQnA.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
+        self.declareButtons()
     }
     
     @objc func onPressMenu(sender:UIButton) {
@@ -40,9 +35,24 @@ class RootViewController: UIViewController {
             let quizzlerVC = QuizzlerViewController()
             navigationViewController(uiVC: quizzlerVC)
             break
+        case 2:
+            let getApiVC = GetFromApiViewController()
+            navigationViewController(uiVC: getApiVC)
+            break
         default:
             print("error")
         }
+    }
+    
+    func declareButtons() {
+        self._view.btnDiceGame.tag = 0
+        self._view.btnDiceGame.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
+        
+        self._view.btnQnA.tag = 1
+        self._view.btnQnA.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
+        
+        self._view.btnGetApi.tag = 2
+        self._view.btnGetApi.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
     }
     
     func navigationViewController(uiVC: UIViewController) {

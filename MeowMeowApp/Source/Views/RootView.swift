@@ -41,6 +41,16 @@ class RootView: UIView {
        return button
     }()
     
+    var btnGetApi: UIButton = {
+       let button = UIButton()
+       button.layer.cornerRadius = 15
+       button.setTitle("GET SOMETHING FROM INTERNET", for: .normal)
+       button.setTitleColor(.white, for: .normal)
+       button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        button.backgroundColor = #colorLiteral(red: 0.6, green: 0.1137254902, blue: 0.137254902, alpha: 1)
+       return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -78,7 +88,7 @@ class RootView: UIView {
         
         self.container.addSubview(btnDiceGame)
         self.btnDiceGame.snp.makeConstraints { (make) in
-            make.top.equalTo(imageView.snp.bottom).offset(80)
+            make.top.equalTo(imageView.snp.bottom).offset(40)
             make.height.equalTo(50)
             make.width.equalToSuperview().offset(-80)
             make.centerX.equalToSuperview()
@@ -87,6 +97,14 @@ class RootView: UIView {
         self.container.addSubview(btnQnA)
         self.btnQnA.snp.makeConstraints { (make) in
             make.top.equalTo(self.btnDiceGame.snp.bottom).offset(30)
+            make.height.equalTo(50)
+            make.width.equalToSuperview().offset(-80)
+            make.centerX.equalToSuperview()
+        }
+        
+        self.container.addSubview(btnGetApi)
+        self.btnGetApi.snp.makeConstraints { (make) in
+            make.top.equalTo(self.btnQnA.snp.bottom).offset(30)
             make.height.equalTo(50)
             make.width.equalToSuperview().offset(-80)
             make.centerX.equalToSuperview()
