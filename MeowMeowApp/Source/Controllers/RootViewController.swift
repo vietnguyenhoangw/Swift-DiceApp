@@ -23,6 +23,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         self.setupLayout()
         self.declareButtons()
+        self.saveUserInfoToStorage()
     }
     
     @objc func onPressMenu(sender:UIButton) {
@@ -44,6 +45,18 @@ class RootViewController: UIViewController {
         }
     }
     
+    func saveUserInfoToStorage() {
+        DispatchQueue.global().async {
+            let defaults = UserDefaults.standard
+            defaults.set("vietnguyenhoangw@gmail.com", forKey: defaultsKeys.userName)
+            defaults.set("hoangviet", forKey: defaultsKeys.password)
+            DispatchQueue.main.async {
+                // update UI always dung main()
+                self.showResultAlert(message: "Save user data")
+            }
+        }
+    }
+    
     func declareButtons() {
         self._view.btnDiceGame.tag = 0
         self._view.btnDiceGame.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
@@ -53,6 +66,16 @@ class RootViewController: UIViewController {
         
         self._view.btnGetApi.tag = 2
         self._view.btnGetApi.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
+        
+        let pressGesture = UITapGestureRecognizer(target: self, action: #selector(self.pressGetstureDetected(_:)))
+        pressGesture.numberOfTapsRequired = 1
+        self._view.loginLabel.isUserInteractionEnabled = true
+        self._view.loginLabel.addGestureRecognizer(pressGesture)
+    }
+    
+    @objc func pressGetstureDetected(_ sender: UITapGestureRecognizer) {
+        let loginVC = LoginViewController()
+        navigationViewController(uiVC: loginVC)
     }
     
     func navigationViewController(uiVC: UIViewController) {
@@ -75,6 +98,13 @@ class RootViewController: UIViewController {
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+    
+    func showResultAlert(message: String) {
+        let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

@@ -15,6 +15,13 @@ class RootView: UIView {
         return container
     }()
     
+    var loginLabel: UILabel = {
+        let txtLabel = UILabel()
+        txtLabel.text = "Login"
+        txtLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        return txtLabel
+    }()
+    
     var backgroundImage: UIImageView = {
         let imgView = UIImageView()
         imgView.image = UIImage(named: "newbackground")
@@ -108,6 +115,12 @@ class RootView: UIView {
             make.height.equalTo(50)
             make.width.equalToSuperview().offset(-80)
             make.centerX.equalToSuperview()
+        }
+        
+        self.container.addSubview(loginLabel)
+        self.loginLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(-40)
         }
     }
     

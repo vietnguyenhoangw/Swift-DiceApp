@@ -12,6 +12,9 @@
 		DC9847EC25AFF65F00F07F71 /* GetFromApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */; };
 		DC9847F925AFFF5B00F07F71 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847F825AFFF5B00F07F71 /* MainCell.swift */; };
 		DC9D8A9B25B13A44001C4E34 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D8A9A25B13A44001C4E34 /* Cocktail.swift */; };
+		DC9D8AA525B14F1C001C4E34 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D8AA425B14F1C001C4E34 /* StorageKeys.swift */; };
+		DC9D8AAB25B151F8001C4E34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D8AAA25B151F8001C4E34 /* LoginViewController.swift */; };
+		DC9D8AAE25B156E3001C4E34 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D8AAD25B156E3001C4E34 /* LoginView.swift */; };
 		DCBE2D6F25A5724700FD7C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */; };
 		DCBE2D7125A5724700FD7C8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */; };
 		DCBE2D7325A5724700FD7C8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2D7225A5724700FD7C8F /* ContentView.swift */; };
@@ -40,6 +43,9 @@
 		DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromApiViewController.swift; sourceTree = "<group>"; };
 		DC9847F825AFFF5B00F07F71 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		DC9D8A9A25B13A44001C4E34 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		DC9D8AA425B14F1C001C4E34 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		DC9D8AAA25B151F8001C4E34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DC9D8AAD25B156E3001C4E34 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DCBE2D6B25A5724700FD7C8F /* MeowMeowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeowMeowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,12 +113,12 @@
 			path = QuizzlerView;
 			sourceTree = "<group>";
 		};
-		DC9847F025AFF7FA00F07F71 /* GetFromApi */ = {
+		DC9847F025AFF7FA00F07F71 /* GetFromApiView */ = {
 			isa = PBXGroup;
 			children = (
 				DC9847E825AFF4E300F07F71 /* GetFromApiView.swift */,
 			);
-			path = GetFromApi;
+			path = GetFromApiView;
 			sourceTree = "<group>";
 		};
 		DC9847F125AFF81200F07F71 /* GetFromApiViewController */ = {
@@ -146,6 +152,30 @@
 				DC9D8A9A25B13A44001C4E34 /* Cocktail.swift */,
 			);
 			path = Cocktail;
+			sourceTree = "<group>";
+		};
+		DC9D8AA325B14EF8001C4E34 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D8AA425B14F1C001C4E34 /* StorageKeys.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DC9D8AA725B151CA001C4E34 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D8AAD25B156E3001C4E34 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		DC9D8AA925B151D7001C4E34 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D8AAA25B151F8001C4E34 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		DCBE2D6225A5724700FD7C8F = {
@@ -194,7 +224,8 @@
 		DCBE2D8325A5728C00FD7C8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC9847F025AFF7FA00F07F71 /* GetFromApi */,
+				DC9D8AA725B151CA001C4E34 /* LoginView */,
+				DC9847F025AFF7FA00F07F71 /* GetFromApiView */,
 				DC9847EF25AFF7ED00F07F71 /* QuizzlerView */,
 				DC9847EE25AFF7E000F07F71 /* DiceView */,
 				DCDCDE3325A6F832002EE9FB /* RootView.swift */,
@@ -205,6 +236,7 @@
 		DCBE2D8425A5729B00FD7C8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC9D8AA925B151D7001C4E34 /* LoginViewController */,
 				DC9847F325AFF83700F07F71 /* QuizzlerViewController */,
 				DC9847F225AFF82000F07F71 /* DiceViewController */,
 				DC9847F125AFF81200F07F71 /* GetFromApiViewController */,
@@ -225,6 +257,7 @@
 		DCBE2D8625A572C100FD7C8F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DC9D8AA325B14EF8001C4E34 /* Constants */,
 				DCBE2D8525A572A800FD7C8F /* Modals */,
 				DCBE2D8425A5729B00FD7C8F /* Controllers */,
 				DCBE2D8325A5728C00FD7C8F /* Views */,
@@ -356,7 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9D8AAB25B151F8001C4E34 /* LoginViewController.swift in Sources */,
 				DCBE2D8C25A572FF00FD7C8F /* DiceViewController.swift in Sources */,
+				DC9D8AA525B14F1C001C4E34 /* StorageKeys.swift in Sources */,
 				DCDCDE3B25A7019C002EE9FB /* iOSDevCenters+GIF.swift in Sources */,
 				DCBE2D6F25A5724700FD7C8F /* AppDelegate.swift in Sources */,
 				DC9D8A9B25B13A44001C4E34 /* Cocktail.swift in Sources */,
@@ -370,6 +405,7 @@
 				DC9847E925AFF4E400F07F71 /* GetFromApiView.swift in Sources */,
 				DCDCDE4525A80812002EE9FB /* QuizzlerViewController.swift in Sources */,
 				DCDCDE4C25A8406A002EE9FB /* QuestionList.swift in Sources */,
+				DC9D8AAE25B156E3001C4E34 /* LoginView.swift in Sources */,
 				DCDCDE4925A84052002EE9FB /* Question.swift in Sources */,
 				DCBE2D8825A572E700FD7C8F /* DiceView.swift in Sources */,
 			);
