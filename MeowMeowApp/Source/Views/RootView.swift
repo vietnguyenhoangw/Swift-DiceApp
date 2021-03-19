@@ -84,7 +84,7 @@ class RootView: UIView {
             make.bottom.equalToSuperview()
         }
         
-        let jeremyGif = UIImage.gifImageWithName("logo-game")
+        let jeremyGif = UIImage.gifImageWithName("giphy.gif")
         let imageView = UIImageView(image: jeremyGif)
         self.container.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F1831D570C8E075BB432F53 /* Pods_MeowMeowApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C522A715E2DA5B792790BD /* Pods_MeowMeowApp.framework */; };
+		DC4E8BDC260458D000BD81F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC4E8BDB260458CF00BD81F5 /* giphy.gif */; };
 		DC9847E925AFF4E400F07F71 /* GetFromApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847E825AFF4E300F07F71 /* GetFromApiView.swift */; };
 		DC9847EC25AFF65F00F07F71 /* GetFromApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */; };
 		DC9847F925AFFF5B00F07F71 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847F825AFFF5B00F07F71 /* MainCell.swift */; };
@@ -26,7 +27,6 @@
 		DCDCDE3425A6F832002EE9FB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3325A6F832002EE9FB /* RootView.swift */; };
 		DCDCDE3825A6F869002EE9FB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3725A6F869002EE9FB /* RootViewController.swift */; };
 		DCDCDE3B25A7019C002EE9FB /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */; };
-		DCDCDE3F25A70514002EE9FB /* logo-game.gif in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDE3E25A70514002EE9FB /* logo-game.gif */; };
 		DCDCDE4225A807FC002EE9FB /* QuizzlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4125A807FB002EE9FB /* QuizzlerView.swift */; };
 		DCDCDE4525A80812002EE9FB /* QuizzlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4425A80812002EE9FB /* QuizzlerViewController.swift */; };
 		DCDCDE4925A84052002EE9FB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDE4825A84052002EE9FB /* Question.swift */; };
@@ -39,6 +39,7 @@
 		79EC6A19E43C5DAA31C7FC4D /* Pods-MeowMeowApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowMeowApp.debug.xcconfig"; path = "Target Support Files/Pods-MeowMeowApp/Pods-MeowMeowApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9810D43C1F242C215B72F4 /* Pods-DiceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceApp.debug.xcconfig"; path = "Target Support Files/Pods-DiceApp/Pods-DiceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C522A715E2DA5B792790BD /* Pods_MeowMeowApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowMeowApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4E8BDB260458CF00BD81F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = SOURCE_ROOT; };
 		DC9847E825AFF4E300F07F71 /* GetFromApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromApiView.swift; sourceTree = "<group>"; };
 		DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromApiViewController.swift; sourceTree = "<group>"; };
 		DC9847F825AFFF5B00F07F71 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		DCDCDE3325A6F832002EE9FB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		DCDCDE3725A6F869002EE9FB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
-		DCDCDE3E25A70514002EE9FB /* logo-game.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "logo-game.gif"; path = "../../../Downloads/logo-game.gif"; sourceTree = "<group>"; };
 		DCDCDE4125A807FB002EE9FB /* QuizzlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerView.swift; sourceTree = "<group>"; };
 		DCDCDE4425A80812002EE9FB /* QuizzlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerViewController.swift; sourceTree = "<group>"; };
 		DCDCDE4825A84052002EE9FB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -201,10 +201,10 @@
 			children = (
 				DCBE2D8625A572C100FD7C8F /* Source */,
 				DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */,
+				DC4E8BDB260458CF00BD81F5 /* giphy.gif */,
 				DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */,
 				DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */,
 				DCBE2D7225A5724700FD7C8F /* ContentView.swift */,
-				DCDCDE3E25A70514002EE9FB /* logo-game.gif */,
 				DCBE2D7425A5724B00FD7C8F /* Assets.xcassets */,
 				DCBE2D7925A5724B00FD7C8F /* LaunchScreen.storyboard */,
 				DCBE2D7C25A5724B00FD7C8F /* Info.plist */,
@@ -334,8 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCBE2D7B25A5724B00FD7C8F /* LaunchScreen.storyboard in Resources */,
-				DCDCDE3F25A70514002EE9FB /* logo-game.gif in Resources */,
 				DCBE2D7825A5724B00FD7C8F /* Preview Assets.xcassets in Resources */,
+				DC4E8BDC260458D000BD81F5 /* giphy.gif in Resources */,
 				DCBE2D7525A5724B00FD7C8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,9 @@ import UIKit
 
 class RootViewController: UIViewController {
     
+    var timer = Timer()
+    var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier.invalid
+    
     let _view: RootView = {
         let view = RootView()
         return view
@@ -24,6 +27,12 @@ class RootViewController: UIViewController {
         self.setupLayout()
         self.declareButtons()
         self.saveUserInfoToStorage()
+        
+        
+        DispatchQueue.main.async {
+            self.registerBackgroundTask()
+            self.scheduledTimerWithTimeInterval()
+        }
     }
     
     @objc func onPressMenu(sender:UIButton) {
@@ -50,10 +59,6 @@ class RootViewController: UIViewController {
             let defaults = UserDefaults.standard
             defaults.set("vietnguyenhoangw@gmail.com", forKey: defaultsKeys.userName)
             defaults.set("hoangviet", forKey: defaultsKeys.password)
-            DispatchQueue.main.async {
-                // update UI always dung main()
-                self.showResultAlert(message: "Save user data")
-            }
         }
     }
     
@@ -106,5 +111,26 @@ class RootViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+    }
+
+    @objc func updateCounting(){
+        NSLog("counting..")
+    }
     
+    func registerBackgroundTask() {
+      backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+        self?.endBackgroundTask()
+      }
+        assert(backgroundTask != UIBackgroundTaskIdentifier.invalid)
+    }
+     
+    func endBackgroundTask() {
+      print("Background task ended.")
+      UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = UIBackgroundTaskIdentifier.invalid
+    }
 }

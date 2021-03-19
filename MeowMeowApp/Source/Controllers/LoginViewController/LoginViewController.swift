@@ -43,8 +43,8 @@ class LoginViewController: UIViewController {
                     self.showResultAlert(message: "Get user data success !!!\n" + self.storageUsername)
                 }
             }
-        } catch {
-            print("Have error in read from storage !!!")
+        } catch let err {
+            print("Have error in read from storage !!!", err)
         }
         
     }
