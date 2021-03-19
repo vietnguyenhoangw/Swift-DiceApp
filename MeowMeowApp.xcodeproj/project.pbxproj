@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F1831D570C8E075BB432F53 /* Pods_MeowMeowApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C522A715E2DA5B792790BD /* Pods_MeowMeowApp.framework */; };
 		DC4E8BDC260458D000BD81F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC4E8BDB260458CF00BD81F5 /* giphy.gif */; };
+		DC4E8BE42604B4D200BD81F5 /* silent-music.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC4E8BE32604B4D200BD81F5 /* silent-music.wav */; };
+		DC4E8BE72604B59300BD81F5 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC4E8BE62604B59300BD81F5 /* music.mp3 */; };
 		DC9847E925AFF4E400F07F71 /* GetFromApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847E825AFF4E300F07F71 /* GetFromApiView.swift */; };
 		DC9847EC25AFF65F00F07F71 /* GetFromApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */; };
 		DC9847F925AFFF5B00F07F71 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9847F825AFFF5B00F07F71 /* MainCell.swift */; };
@@ -40,6 +42,8 @@
 		AF9810D43C1F242C215B72F4 /* Pods-DiceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceApp.debug.xcconfig"; path = "Target Support Files/Pods-DiceApp/Pods-DiceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C522A715E2DA5B792790BD /* Pods_MeowMeowApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowMeowApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4E8BDB260458CF00BD81F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = SOURCE_ROOT; };
+		DC4E8BE32604B4D200BD81F5 /* silent-music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "silent-music.wav"; sourceTree = SOURCE_ROOT; };
+		DC4E8BE62604B59300BD81F5 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = SOURCE_ROOT; };
 		DC9847E825AFF4E300F07F71 /* GetFromApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromApiView.swift; sourceTree = "<group>"; };
 		DC9847EB25AFF65F00F07F71 /* GetFromApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromApiViewController.swift; sourceTree = "<group>"; };
 		DC9847F825AFFF5B00F07F71 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
@@ -202,7 +206,9 @@
 				DCBE2D8625A572C100FD7C8F /* Source */,
 				DCBE2D6E25A5724700FD7C8F /* AppDelegate.swift */,
 				DC4E8BDB260458CF00BD81F5 /* giphy.gif */,
+				DC4E8BE62604B59300BD81F5 /* music.mp3 */,
 				DCBE2D7025A5724700FD7C8F /* SceneDelegate.swift */,
+				DC4E8BE32604B4D200BD81F5 /* silent-music.wav */,
 				DCDCDE3A25A7019C002EE9FB /* iOSDevCenters+GIF.swift */,
 				DCBE2D7225A5724700FD7C8F /* ContentView.swift */,
 				DCBE2D7425A5724B00FD7C8F /* Assets.xcassets */,
@@ -334,6 +340,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCBE2D7B25A5724B00FD7C8F /* LaunchScreen.storyboard in Resources */,
+				DC4E8BE42604B4D200BD81F5 /* silent-music.wav in Resources */,
+				DC4E8BE72604B59300BD81F5 /* music.mp3 in Resources */,
 				DCBE2D7825A5724B00FD7C8F /* Preview Assets.xcassets in Resources */,
 				DC4E8BDC260458D000BD81F5 /* giphy.gif in Resources */,
 				DCBE2D7525A5724B00FD7C8F /* Assets.xcassets in Resources */,

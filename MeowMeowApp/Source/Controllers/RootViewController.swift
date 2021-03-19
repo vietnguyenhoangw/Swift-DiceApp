@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RootViewController: UIViewController {
     
     var timer = Timer()
     var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier.invalid
+    var countTime: Int = 0
+    var AudioPlayer = AVAudioPlayer()
     
     let _view: RootView = {
         let view = RootView()
@@ -28,11 +31,16 @@ class RootViewController: UIViewController {
         self.declareButtons()
         self.saveUserInfoToStorage()
         
-        
-        DispatchQueue.main.async {
-            self.registerBackgroundTask()
-            self.scheduledTimerWithTimeInterval()
-        }
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: "mp3")!)
+        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        AudioPlayer.prepareToPlay()
+        AudioPlayer.numberOfLoops = -1
+        AudioPlayer.play()
+          
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     @objc func onPressMenu(sender:UIButton) {
@@ -49,9 +57,40 @@ class RootViewController: UIViewController {
             let getApiVC = GetFromApiViewController()
             navigationViewController(uiVC: getApiVC)
             break
+        case 3:
+            print("background timeremaing: ", UIApplication.shared.backgroundTimeRemaining)
+            DispatchQueue.global().async {
+                self.registerBackgroundTask()
+                DispatchQueue.main.async {
+                    self.showResultAlert(message: "Watching your log on Xcode")
+                    self.scheduledTimerWithTimeInterval()
+                }
+            }
+            break
         default:
             print("error")
         }
+    }
+    
+    @objc func updateCounting(){
+        print("counting.. >: ", self.countTime)
+        self.countTime += 1
+        if self.countTime > 100 {
+            AudioPlayer.stop()
+        }
+    }
+    
+    func registerBackgroundTask() {
+      backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+        self?.endBackgroundTask()
+      }
+        assert(backgroundTask != UIBackgroundTaskIdentifier.invalid)
+    }
+     
+    func endBackgroundTask() {
+      print("Background task ended.")
+      UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = UIBackgroundTaskIdentifier.invalid
     }
     
     func saveUserInfoToStorage() {
@@ -71,6 +110,9 @@ class RootViewController: UIViewController {
         
         self._view.btnGetApi.tag = 2
         self._view.btnGetApi.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
+        
+        self._view.btnRunBackground.tag = 3
+        self._view.btnRunBackground.addTarget(self, action: #selector(self.onPressMenu), for: .touchUpInside)
         
         let pressGesture = UITapGestureRecognizer(target: self, action: #selector(self.pressGetstureDetected(_:)))
         pressGesture.numberOfTapsRequired = 1
@@ -115,22 +157,5 @@ class RootViewController: UIViewController {
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
-    }
-
-    @objc func updateCounting(){
-        NSLog("counting..")
-    }
-    
-    func registerBackgroundTask() {
-      backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
-        self?.endBackgroundTask()
-      }
-        assert(backgroundTask != UIBackgroundTaskIdentifier.invalid)
-    }
-     
-    func endBackgroundTask() {
-      print("Background task ended.")
-      UIApplication.shared.endBackgroundTask(backgroundTask)
-        backgroundTask = UIBackgroundTaskIdentifier.invalid
     }
 }

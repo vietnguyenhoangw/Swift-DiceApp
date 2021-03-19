@@ -58,6 +58,17 @@ class RootView: UIView {
        return button
     }()
     
+    var btnRunBackground: UIButton = {
+       let button = UIButton()
+       button.layer.cornerRadius = 15
+       button.setTitle("RUN BACK GROUND", for: .normal)
+       button.setTitleColor(.white, for: .normal)
+       button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        button.backgroundColor = #colorLiteral(red: 0.6, green: 0.1137254902, blue: 0.137254902, alpha: 1)
+       return button
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -84,13 +95,14 @@ class RootView: UIView {
             make.bottom.equalToSuperview()
         }
         
-        let jeremyGif = UIImage.gifImageWithName("giphy.gif")
+        let jeremyGif = UIImage.gifImageWithName("giphy")
         let imageView = UIImageView(image: jeremyGif)
         self.container.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(30)
             make.right.equalToSuperview().offset(-30)
             make.top.equalToSuperview().offset(60)
+            make.height.equalTo(180)
         }
         
         self.container.addSubview(btnDiceGame)
@@ -121,6 +133,14 @@ class RootView: UIView {
         self.loginLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(40)
             make.right.equalToSuperview().offset(-40)
+        }
+        
+        self.container.addSubview(btnRunBackground)
+        self.btnRunBackground.snp.makeConstraints { (make) in
+            make.top.equalTo(self.btnGetApi.snp.bottom).offset(30)
+            make.height.equalTo(50)
+            make.width.equalToSuperview().offset(-80)
+            make.centerX.equalToSuperview()
         }
     }
     
